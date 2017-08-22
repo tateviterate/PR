@@ -1,0 +1,12 @@
+//
+// Hover css
+//................................
+ul li a:hover {
+  color: #0d2431;
+  border-bottom: 1px solid transparent;
+  -webkit-border-image: url(../images/border.png) 10 round; /* Safari 3.1-5 */
+  -o-border-image: url(../images/border.png) 10 round; /* Opera 11-12.1 */
+  border-image: url(../images/border.png) 10 round;
+
+}
+

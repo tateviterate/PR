@@ -1,0 +1,615 @@
+a, abbr, acronym, address, applet, article, aside, audio, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  outline: 0 !important;
+}
+
+* {
+  -webkit-text-size-adjust: auto !important;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+a {
+  border: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  line-height: 1;
+  word-wrap: break-word;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:after, blockquote:before, q:after, q:before {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input[type="text"], input[type="submit"], textarea {
+  outline: 0 !important;
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+:focus {
+  outline-color: transparent;
+  outline-style: none;
+}
+
+*, :after, :before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.clear {
+  clear: both !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 0 !important;
+  width: 0 !important;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/*input[type=text], input[type=email], input[type=password], input[type=number], textarea {
+	&::-webkit-input-placeholder {
+		opacity: 1;
+		color: #74421c;
+	}
+	&:-moz-placeholder {
+		opacity: 1;
+		color: #74421c;
+	}
+	&::-moz-placeholder {
+		opacity: 1;
+		color: #74421c;
+	}
+	&:-ms-input-placeholder {
+		opacity: 1;
+		color: #74421c;
+	}
+}
+
+
+input.error {
+	color: #D9272E !important;
+
+	&::-webkit-input-placeholder {
+		color: #D9272E !important;
+	}
+	&:-moz-placeholder {
+		color: #D9272E !important;
+		opacity: 1;
+	}
+	&::-moz-placeholder {
+		color: #D9272E !important;
+		opacity: 1;
+	}
+	&:-ms-input-placeholder {
+		color: #D9272E !important;
+	}
+}
+ */
+/*
+	cdCss functions
+	--------------------
+*/
+@font-face {
+  font-family: 'Vrinda';
+  src: url("../fonts/Vrinda.eot?#iefix") format("embedded-opentype"), url("../fonts/Vrinda.woff") format("woff"), url("../fonts/Vrinda.ttf") format("truetype"), url("../fonts/Vrinda.svg#Vrinda") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'MicrosoftPhagsPa';
+  src: url("../fonts/MicrosoftPhagsPa.eot?#iefix") format("embedded-opentype"), url("../fonts/MicrosoftPhagsPa.woff") format("woff"), url("../fonts/MicrosoftPhagsPa.ttf") format("truetype"), url("../fonts/MicrosoftPhagsPa.svg#MicrosoftPhagsPa") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corbel';
+  src: url("../fonts/Corbel.eot?#iefix") format("embedded-opentype"), url("../fonts/Corbel.woff") format("woff"), url("../fonts/Corbel.ttf") format("truetype"), url("../fonts/Corbel.svg#Corbel") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corbel-Bold';
+  src: url("../fonts/Corbel-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Corbel-Bold.woff") format("woff"), url("../fonts/Corbel-Bold.ttf") format("truetype"), url("../fonts/Corbel-Bold.svg#Corbel-Bold") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Corbel-Italic';
+  src: url("../fonts/Corbel-Italic.eot?#iefix") format("embedded-opentype"), url("../fonts/Corbel-Italic.woff") format("woff"), url("../fonts/Corbel-Italic.ttf") format("truetype"), url("../fonts/Corbel-Italic.svg#Corbel-Italic") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Slider */
+/* Slider */
+html, body {
+  margin: 0 !important;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  background: #e1e2d8;
+  width: 100%;
+  opacity: 0.7;
+}
+
+header ul {
+  list-style-type: none;
+  margin-right: 18%;
+  padding: 0;
+  overflow: hidden;
+  background-color: transparent;
+  float: right;
+}
+
+header ul li {
+  float: left;
+}
+
+header ul li a {
+  display: block;
+  text-align: center;
+  font-family: 'Vrinda';
+  font-size: 18px;
+  color: #656e73;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 30px 30px 10px 30px;
+  margin-bottom: 15px;
+}
+
+section .home {
+  width: 100%;
+  height: 925px;
+  background-image: url("../images/back.png");
+  background-size: 100% 100%;
+  position: relative;
+}
+
+section .home .middle {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  top: 40%;
+  color: #ffffff;
+}
+
+section .home .middle h1 {
+  font-family: MicrosoftPhagsPa;
+  font-size: 55px;
+}
+
+section .home .middle h3 {
+  font-size: 30px;
+  margin-top: 3%;
+}
+
+section .home .middle a {
+  text-decoration: none;
+  width: 54px;
+  height: 54px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  color: #ffffff;
+  display: inline-block;
+  margin-top: 2%;
+  padding-top: 8px;
+}
+
+section .about .anchor {
+  display: block;
+  position: relative;
+  top: -113px;
+}
+
+section .about h2 {
+  font-size: 30px;
+  font-family: MicrosoftPhagsPa;
+  color: #0d2431;
+  text-align: center;
+  margin: 3% 0;
+}
+
+section .about .all {
+  margin: 4% 0;
+}
+
+section .about .all:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+section .about .all .right {
+  float: left;
+  max-width: 533px;
+  margin-left: 10%;
+}
+
+section .about .all .right h5 {
+  font-family: Corbel-Bold;
+  font-size: 18px;
+  color: #0d2431;
+  margin-bottom: 30px;
+}
+
+section .about .all .right p, section .about .all .right h6, section .about .all .right ul {
+  font-family: 'Corbel';
+  font-size: 16px;
+  color: #656e73;
+  line-height: 2.2;
+}
+
+section .about .all .right ul {
+  list-style: initial;
+  margin: 3% 4%;
+  line-height: 2;
+}
+
+section .about .all .vertical-line {
+  position: relative;
+  right: 35%;
+}
+
+section .about .all .left {
+  float: left;
+  max-width: 533px;
+  margin-left: 17%;
+}
+
+section .about .all .left h5 {
+  font-family: Corbel-Bold;
+  font-size: 18px;
+  color: #0d2431;
+  margin-bottom: 40px;
+}
+
+section .about .all .left p {
+  font-family: 'Corbel';
+  font-size: 16px;
+  color: #656e73;
+  line-height: 2.2;
+}
+
+section .work {
+  background-image: url("../images/media.png");
+  background-size: 100% 100%;
+  width: 100%;
+  height: 554px;
+  text-align: center;
+}
+
+section .work h2 {
+  font-family: MicrosoftPhagsPa;
+  font-size: 30px;
+  color: #ffffff;
+  padding: 40px;
+}
+
+section .work .work-content {
+  margin-left: 10%;
+}
+
+section .work .work-content div {
+  float: left;
+  margin-left: 7%;
+  text-align: center;
+}
+
+section .work .work-content div img {
+  margin: 35px;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section .work .work-content div h3 {
+  font-family: MicrosoftPhagsPa;
+  font-size: 19px;
+  color: #ffffff;
+}
+
+section .work .work-content div p {
+  width: 180px;
+  font-family: MicrosoftPhagsPa;
+  font-size: 11px;
+  color: #ffffff;
+  margin: 10px 23px;
+  line-height: 2;
+}
+
+section .results {
+  text-align: center;
+}
+
+section .results h2 {
+  font-family: MicrosoftPhagsPa;
+  font-size: 30px;
+  color: #0d2431;
+  margin: 68px 0 88px 0;
+}
+
+section .results img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+section .test {
+  text-align: center;
+  background: #f0f2f3;
+  position: relative;
+  height: 540px;
+}
+
+section .test h2 {
+  font-family: MicrosoftPhagsPa;
+  font-size: 30px;
+  color: #0d2431;
+  padding: 68px 0 88px 0;
+}
+
+section .test .qs-slider {
+  background: #8b98a1;
+  width: 62.5%;
+  margin: 0 auto;
+  position: relative;
+  margin-bottom: 84px;
+}
+
+section .test .qs-slider .qs-icon {
+  position: absolute;
+  left: 34px;
+  top: -11px;
+}
+
+section .test .qs-slider .qs-photo {
+  position: relative;
+  top: -20px;
+}
+
+section .test .qs-slider .qs-message {
+  font-family: Corbel-Italic;
+  font-size: 18px;
+  color: #f0f2f3;
+  padding: 0 50px;
+}
+
+section .test .qs-slider .qs-name {
+  font-family: Corbel;
+  font-size: 16px;
+  color: #0d2431;
+  font-weight: bold;
+  padding: 30px 0 20px 0;
+}
+
+section .test .qs-slider .qs-role {
+  font-family: Corbel-Italic;
+  font-size: 16px;
+  color: #0d2431;
+  padding-bottom: 30px;
+}
+
+section .test a {
+  position: absolute;
+}
+
+section .test a i {
+  color: #656e73;
+}
+
+section .test .qs-arrow-left {
+  left: 17%;
+  top: 55.3%;
+}
+
+section .test .qs-arrow-right {
+  right: 17%;
+  bottom: 35.7%;
+}
+
+section .test .qs-arrows:hover {
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+section .contact {
+  width: 100%;
+  height: 424px;
+  background-image: url("../images/map.png");
+}
+
+section .contact .contact-forms {
+  position: relative;
+  left: 18.75%;
+  top: 56px;
+}
+
+section .contact .contact-forms input, section .contact .contact-forms button {
+  display: block;
+  margin: 20px 0;
+  padding: 7px;
+}
+
+section .contact .contact-forms input, section .contact .contact-forms textarea {
+  width: 355px;
+  height: 35px;
+  background: transparent;
+  border: 1px solid #f0f2f3;
+  font-family: Vrinda;
+  font-size: 18px;
+  color: #e3e4e5;
+}
+
+section .contact .contact-forms textarea {
+  height: 115px;
+}
+
+section .contact .contact-forms button {
+  position: relative;
+  left: 15.2%;
+  width: 67px;
+  height: 25px;
+  text-align: center;
+  padding: 0;
+  color: #85888d;
+  border: none;
+  font-family: Vrinda;
+  font-size: 18px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+section .contact .contact-forms input::-webkit-input-placeholder {
+  color: #e3e4e5;
+}
+
+section .contact .contact-forms input:-moz-placeholder {
+  color: #e3e4e5;
+}
+
+section .contact .contact-forms input::-moz-placeholder {
+  color: #e3e4e5;
+}
+
+section .contact .contact-forms input:-ms-input-placeholder {
+  color: #e3e4e5;
+}
+
+section .contact .contact-forms h5 {
+  font-size: 24px;
+  font-family: Vrinda;
+  color: #f0f2f3;
+  margin-bottom: 35px;
+}
+
+footer {
+  background: #616f79;
+  width: 100%;
+  height: 292px;
+}
+
+footer .footer-content {
+  position: relative;
+  left: 18.7%;
+  top: 60px;
+}
+
+footer .footer-content div {
+  float: left;
+}
+
+footer .footer-content h3 {
+  font-family: Vrinda;
+  font-size: 18px;
+  color: #f0f2f3;
+}
+
+footer .footer-content .footer-logo {
+  width: 20.6%;
+  height: 146px;
+}
+
+footer .footer-content .footer-logo h2 {
+  font-family: MicrosoftPhagsPa;
+  font-size: 30px;
+  font-weight: bold;
+  color: #f0f2f3;
+  margin-bottom: 33px;
+}
+
+footer .footer-content .footer-logo p {
+  color: #f0f2f3;
+  font-family: Vrinda;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-bottom: 40px;
+}
+
+footer .footer-content .footer-logo .icon-text {
+  display: inline;
+}
+
+footer .footer-content .footer-logo img {
+  margin-left: 20px;
+}
+
+footer .footer-content .footer-info {
+  width: 16.4%;
+  height: 175px;
+}
+
+footer .footer-content .footer-info .border {
+  width: 175px;
+  border-top: 1px solid #8b98a1;
+  padding-top: 20px;
+  margin-top: 13px;
+}
+
+footer .footer-content .footer-info .border p {
+  font-family: Vrinda;
+  font-size: 16px;
+  color: #f0f2f3;
+  padding: 5px;
+}
+
+footer .footer-content .footer-info .border p i {
+  color: #8b98a1;
+}
+
+footer .footer-content .footer-navigation a {
+  text-decoration: none;
+  color: #e6e9eb;
+  display: block;
+  font-size: 11px;
+  font-family: MicrosoftPhagsPa;
+  line-height: 2.2;
+}
+
+/*
+* Ie fixes
+*/
